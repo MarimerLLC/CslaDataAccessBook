@@ -21,12 +21,12 @@ namespace Library
     }
 
     [FetchChild]
-    private void Fetch(System.Data.IDataReader data)
+    private void Fetch(Csla.Data.SafeDataReader data)
     {
-      Id = data.GetInt32(data.GetOrdinal("Id"));
+      Id = data.GetInt32("Id");
       Name = string.Format("{0} {1}", 
-        data.GetString(data.GetOrdinal("FirstName")),
-        data.GetString(data.GetOrdinal("LastName")));
+        data.GetString("FirstName"),
+        data.GetString("LastName"));
     }
   }
 }

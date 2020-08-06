@@ -49,9 +49,9 @@ namespace Library
         data.Read();
         using (BypassPropertyChecks)
         {
-          Id = data.GetInt32(data.GetOrdinal("Id"));
-          FirstName = data.GetString(data.GetOrdinal("FirstName"));
-          LastName = data.GetString(data.GetOrdinal("LastName"));
+          Id = data.GetInt32("Id");
+          FirstName = data.GetString("FirstName");
+          LastName = data.GetString("LastName");
         }
       }
       BusinessRules.CheckRules();

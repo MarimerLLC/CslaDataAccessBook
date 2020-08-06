@@ -15,7 +15,7 @@ namespace Library
         {
           while (data.Read())
             Add(DataPortal.Fetch<CategoryEdit>(
-              data.GetInt32(data.GetOrdinal("Id")), data.GetString(data.GetOrdinal("Category"))));
+              data.GetInt32("Id"), data.GetString("Category")));
         }
       }
     }

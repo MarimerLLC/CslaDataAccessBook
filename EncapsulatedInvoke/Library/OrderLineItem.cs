@@ -39,14 +39,13 @@ namespace Library
     }
 
     [FetchChild]
-    private void Fetch(System.Data.IDataReader data)
+    private void Fetch(Csla.Data.SafeDataReader data)
     {
       using (BypassPropertyChecks)
       {
-        Id = data.GetInt32(data.GetOrdinal("Id"));
-        var shipDateIndex = data.GetOrdinal("ShipDate");
-        if (!data.IsDBNull(shipDateIndex))
-          ShipDate = data.GetDateTime(shipDateIndex);
+        Id = data.GetInt32("Id");
+        if (!data.IsDBNull("ShipDate"))
+          ShipDate = data.GetDateTime("ShipDate");
         Persons = DataPortal.FetchChild<OrderLinePersons>(Id);
       }
     }

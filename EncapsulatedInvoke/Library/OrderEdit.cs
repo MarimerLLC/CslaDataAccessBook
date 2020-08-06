@@ -63,10 +63,10 @@ namespace Library
       data.Read();
       using (BypassPropertyChecks)
       {
-        Id = data.GetInt32(data.GetOrdinal("Id"));
-        CustomerId = data.GetInt32(data.GetOrdinal("CustomerId"));
-        OrderDate = data.GetDateTime(data.GetOrdinal("OrderDate"));
-        LastEdit = data.GetDateTime(data.GetOrdinal("OrderEditDate"));
+        Id = data.GetInt32("Id");
+        CustomerId = data.GetInt32("CustomerId");
+        OrderDate = data.GetDateTime("OrderDate");
+        LastEdit = data.GetDateTime("OrderEditDate");
       }
       OrderLineItems = DataPortal.FetchChild<OrderLineItems>(id);
     }

@@ -31,12 +31,12 @@ namespace Library
     }
 
     [FetchChild]
-    private void Fetch(System.Data.IDataReader data)
+    private void Fetch(Csla.Data.SafeDataReader data)
     {
       using (BypassPropertyChecks)
       {
-        Id = data.GetInt32(data.GetOrdinal("Id"));
-        Name = data.GetString(data.GetOrdinal("Name"));
+        Id = data.GetInt32("Id");
+        Name = data.GetString("Name");
       }
     }
 

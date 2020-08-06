@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{3B545387-1F1A-46AC-8614-3EA933E88FBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.Mock", "DataAccess.Mock\DataAccess.Mock.csproj", "{F66E1FAB-3A71-4A50-84CA-773DD0EE86C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3B545387-1F1A-46AC-8614-3EA933E88FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B545387-1F1A-46AC-8614-3EA933E88FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B545387-1F1A-46AC-8614-3EA933E88FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F66E1FAB-3A71-4A50-84CA-773DD0EE86C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66E1FAB-3A71-4A50-84CA-773DD0EE86C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66E1FAB-3A71-4A50-84CA-773DD0EE86C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66E1FAB-3A71-4A50-84CA-773DD0EE86C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

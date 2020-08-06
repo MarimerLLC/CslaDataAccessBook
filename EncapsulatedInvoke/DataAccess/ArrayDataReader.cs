@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace DataAccess.Mock
+namespace DataAccess
 {
   public class ArrayDataReader : System.Data.IDataReader
   {

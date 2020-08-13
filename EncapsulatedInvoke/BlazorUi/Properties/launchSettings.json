@@ -1,0 +1,28 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:49581",
+      "sslPort": 44330
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "DATABASE": "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=e:\\src\\rdl\\CslaDataAccessBook\\database.mdf;Integrated Security=True;Connect Timeout=30",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "BlazorUi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    }
+  }
+}

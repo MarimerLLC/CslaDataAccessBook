@@ -16,15 +16,15 @@ namespace DataAccess.SqlEf
 
     public SafeDataReader Fetch()
     {
-      var data = from r in dataContext.CategoryTables
+      var data = from r in dataContext.Categories
                  select r;
-      return new SafeDataReader(new ListDataReader<CategoryTable>(data));
+      return new SafeDataReader(new ListDataReader<CategoryData>(data));
     }
 
     public int Insert(string name)
     {
-      var data = new CategoryTable { Category = name };
-      dataContext.CategoryTables.Add(data);
+      var data = new CategoryData { Category = name };
+      dataContext.Categories.Add(data);
       var count = dataContext.SaveChanges();
       if (count == 0)
         throw new InvalidOperationException("CategoryDal.Insert");
@@ -33,7 +33,7 @@ namespace DataAccess.SqlEf
 
     public void Update(int id, string name)
     {
-      var item = (from r in dataContext.CategoryTables
+      var item = (from r in dataContext.Categories
                   where r.Id == id
                   select r).First();
       item.Category = name;
@@ -44,7 +44,7 @@ namespace DataAccess.SqlEf
 
     public void Delete(int id)
     {
-      var item = (from r in dataContext.CategoryTables
+      var item = (from r in dataContext.Categories
                   where r.Id == id
                   select r).First();
       dataContext.Remove(item);

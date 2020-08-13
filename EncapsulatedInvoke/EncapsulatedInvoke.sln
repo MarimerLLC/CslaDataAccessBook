@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{5983D20D-A248-4903-B6F3-36503ADCD627}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library", "Library\Library.csproj", "{5983D20D-A248-4903-B6F3-36503ADCD627}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{3B545387-1F1A-46AC-8614-3EA933E88FBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{3B545387-1F1A-46AC-8614-3EA933E88FBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.Mock", "DataAccess.Mock\DataAccess.Mock.csproj", "{F66E1FAB-3A71-4A50-84CA-773DD0EE86C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess.Mock", "DataAccess.Mock\DataAccess.Mock.csproj", "{F66E1FAB-3A71-4A50-84CA-773DD0EE86C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.SqlEf", "DataAccess.SqlEf\DataAccess.SqlEf.csproj", "{9F93CB5B-5E60-438E-8479-9BD6A69DE771}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess.SqlEf", "DataAccess.SqlEf\DataAccess.SqlEf.csproj", "{9F93CB5B-5E60-438E-8479-9BD6A69DE771}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorUi", "BlazorUi\BlazorUi.csproj", "{D72BCD54-33F2-450A-8761-CC1D0E779917}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9F93CB5B-5E60-438E-8479-9BD6A69DE771}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F93CB5B-5E60-438E-8479-9BD6A69DE771}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F93CB5B-5E60-438E-8479-9BD6A69DE771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D72BCD54-33F2-450A-8761-CC1D0E779917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D72BCD54-33F2-450A-8761-CC1D0E779917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D72BCD54-33F2-450A-8761-CC1D0E779917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D72BCD54-33F2-450A-8761-CC1D0E779917}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,32 @@
+﻿@page "/"
+@using System.Linq
+@inject DataAccess.SqlEf.DataContext.DatabaseContext dataContext
+@inject DataAccess.ICategoryDal dal
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+@if (data != null)
+{
+  @data.Count
+}
+
+
+@code { 
+  private List<DataAccess.SqlEf.DataContext.CategoryData> data;
+
+  protected override async Task OnParametersSetAsync()
+  {
+    await Task.Delay(1);
+    //data = (from r in dataContext.Categories
+    //        select r).ToList();
+    data = new List<DataAccess.SqlEf.DataContext.CategoryData>();
+    var dr = dal.Fetch();
+    while (dr.Read())
+    {
+      data.Add(new DataAccess.SqlEf.DataContext.CategoryData { Id = dr.GetInt32("Id"), Category = dr.GetString("Category") });
+    }
+  }
+
+}

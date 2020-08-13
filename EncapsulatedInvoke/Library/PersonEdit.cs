@@ -14,6 +14,13 @@ namespace Library
       private set { LoadProperty(IdProperty, value); }
     }
 
+    public static readonly PropertyInfo<string> MiddleNameProperty = RegisterProperty<string>(nameof(Surname));
+    public string Surname
+    {
+      get => GetProperty(MiddleNameProperty);
+      set => SetProperty(MiddleNameProperty, value);
+    }
+
     public static readonly PropertyInfo<string> FirstNameProperty = RegisterProperty<string>(nameof(FirstName));
     [Display(Name = "First name")]
     public string FirstName
@@ -50,7 +57,8 @@ namespace Library
         using (BypassPropertyChecks)
         {
           Id = data.GetInt32("Id");
-          FirstName = data.GetString("FirstName");
+          FirstName = data.GetString(nameof(FirstName));
+          Surname = data.GetString(nameof(Surname));
           LastName = data.GetString("LastName");
         }
       }
